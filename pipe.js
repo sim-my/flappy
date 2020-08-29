@@ -4,8 +4,9 @@ class Pipe {
   constructor() {
     imgtop = loadImage("pipetop.jpg");
     imgbottom = loadImage("pipebottom.png");
-    this.top = random(height / 2);
-    this.bottom = random(height / 2);
+    this.top = random(height/4, height/2);
+    this.space = random(100,300);
+    this.bottom = height - this.top-this.space;
     this.x = width;
     this.w = 80;
     this.speed = 5;
@@ -19,8 +20,8 @@ class Pipe {
     };
 
     this.hits = function (bird) {
-      if (bird.y < this.top || bird.y > height - this.bottom) {
-        if (bird.x >= this.x && bird.x <= this.x + this.w) {
+      if (bird.y < this.top || bird.y > height - this.bottom-48) {
+        if (bird.x >= this.x-48 && bird.x <= this.x + this.w + 48) {
           return true;
         }
       }
