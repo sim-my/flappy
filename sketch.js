@@ -2,7 +2,7 @@ var bird;
 var pipes = [];
 var bg;
 function setup() {
-	bg = loadImage('clouds.jpg');
+	bg = loadImage('clouds.png');
 	createCanvas(600, 600);
 	bird = new Bird();
 	pipes.push(new Pipe());
