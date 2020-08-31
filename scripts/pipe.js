@@ -2,9 +2,9 @@ let imgtop,imgbottom;
 class Pipe {
  
   constructor() {
-    imgtop = loadImage("pipetop.jpg");
-    imgbottom = loadImage("pipebottom.png");
-    this.pointSound = new Audio("point.wav");
+    imgtop = loadImage("../assets/images/pipetop.jpg");
+    imgbottom = loadImage("../assets/images/pipebottom.png");
+    this.pointSound = new Audio("../assets/sounds/point.wav");
     this.top = random(height/4, height/2);
     this.space = random(100,300);
     this.bottom = height - this.top-this.space;

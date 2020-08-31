@@ -1,19 +1,17 @@
-var bird;
-var firstGame = true;
-var reset = false;
-var score, scoreElem, message, intro;
-var pipes = [];
+var bird,pipes = [];
+var firstGame = true,reset = false;
+var score, scoreElem, message;
 var bg, gameover, gameoverElem;
 var flyingSound, hitSound, pointSound, dieSound;
+
 function preload() {
-  bg = loadImage("clouds.png");
-  gameover = loadImage("gameover.png");
-  intro = loadImage('intro.jpg')
+  bg = loadImage("../assets/images/clouds.png");
+  gameover = loadImage("../assets/images/gameover.png");
+  hitSound = new Audio("../assets/sounds/hit.wav");
+  dieSound = new Audio("../assets/sounds/die.wav");
 }
 function setup() {
   createCanvas(600, 600);
-  hitSound = new Audio("hit.wav");
-  dieSound = new Audio("die.wav");
   start();
 }
 
@@ -28,7 +26,7 @@ function start() {
 
 function draw() {
   background(bg);
-  gameoverElem = createImg("gameover.png");
+  gameoverElem = createImg("../assets/images/gameover.png");
   gameoverElem.position(width / 3, height / 4);
   gameoverElem.size(width / 3, height / 8);
   gameoverElem.hide();

@@ -1,11 +1,11 @@
 let midbird, upbird, downbird;
 class Bird {
   constructor() {
-    midbird = loadImage("bird.png");
-    upbird = loadImage("upbird.png");
-    downbird = loadImage("downbird.png");
-    this.flyingSound = new Audio("wing.wav");
-    this.fallingSound = new Audio("swoosh.wav");
+    midbird = loadImage("../assets/images/bird.png");
+    upbird = loadImage("../assets/images/upbird.png");
+    downbird = loadImage("../assets/images/downbird.png");
+    this.flyingSound = new Audio("../assets/sounds/wing.wav");
+    this.fallingSound = new Audio("../assets/sounds/swoosh.wav");
     this.birdArray = [upbird, midbird, downbird, midbird];
     this.count = 0;
     this.y = height / 2;
